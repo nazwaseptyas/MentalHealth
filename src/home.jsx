@@ -186,11 +186,30 @@ const Home = () => {
           </div>
         </div>
         <br />
+        <div className="cta-area pb-110 pt-120">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title text-center mb-60">
+                <span>Masalah Kesehatan Mental</span>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src="assets/img/bg/mental.jpg"
+              alt="Background"
+              style={{ width: '600px' }}
+            />
+          </div>
+        </div>
         <br />
         <br />
-        <br />
-        <br />
-
         <div className="tab-area pb-90">
           <div className="container">
             <div className="row">

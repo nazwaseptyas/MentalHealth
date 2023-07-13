@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Layout = ({ children }) => {
   return (
     <>
@@ -20,19 +22,19 @@ const Layout = ({ children }) => {
                 <nav id="mobile-menu">
                   <ul>
                     <li>
-                      <a href="index.html">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <a href="about.html">About</a>
+                      <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <a href="services.html">Konsultasi</a>
+                      <Link to="/services">Konsultasi</Link>
                     </li>
                     <li>
-                      <a href="#">Artikel</a>
+                      <Link to="/articles">Artikel</Link>
                     </li>
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <Link to="/contact">Contact</Link>
                     </li>
                   </ul>
                 </nav>
