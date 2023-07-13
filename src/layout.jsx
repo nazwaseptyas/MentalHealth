@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
                       <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <Link to="/services">Konsultasi</Link>
+                      <Link to="/konsultasi">Konsultasi</Link>
                     </li>
                     <li>
                       <Link to="/articles">Artikel</Link>

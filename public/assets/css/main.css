@@ -257,6 +257,10 @@ label {
     background: #f0f4f7;
 }
 
+.theme-green {
+    background: #f6fbf4;
+}
+
 .theme-red-soft {
     background: #fffaf9;
 }
@@ -1821,12 +1825,6 @@ label {
 .pr-200 {
     padding-right: 200px;
 }
-
-
-/*
-	Flaticon icon font: Flaticon
-	Creation date: 30/08/2020 07:53
-	*/
 
 @font-face {
     font-family: 'Flaticon';
