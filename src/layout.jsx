@@ -8,13 +8,13 @@ const Layout = ({ children }) => {
           <div className="row align-items-center">
             <div className="col-xl-3 col-lg-3">
               <div className="logo">
-                <a href="index.html">
+                <Link to="/">
                   <img
-                    src="/assets/img/logo/yukceritalogo.png"
+                    src="assets/img/logo/yukceritalogo.png"
                     alt="logo"
                     style={{ width: '200px' }}
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-xl-6 col-lg-6">
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
                       <Link to="/konsultasi">Konsultasi</Link>
                     </li>
                     <li>
-                      <Link to="/articles">Artikel</Link>
+                      <Link to="/artikel">Artikel</Link>
                     </li>
                     <li>
                       <Link to="/kontak">Contact</Link>
@@ -43,14 +43,14 @@ const Layout = ({ children }) => {
             <div className="col-xl-3 col-lg-3">
               <div className="header-right d-none d-lg-block">
                 <div className="header-button f-right">
-                  <a href="contact.html" className="c-btn">
+                  <Link to="/login" className="c-btn">
                     Masuk
-                  </a>
+                  </Link>
                 </div>
                 <div className="header-button f-right">
-                  <a href="contact.html" className="c-btn">
+                  <Link to="/register" className="c-btn">
                     Daftar
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -68,9 +68,9 @@ const Layout = ({ children }) => {
               <div className="col-xl-3 col-lg-6 col-md-6 mb-30">
                 <div className="footer-wrapper">
                   <div className="footer-logo">
-                    <a href="index.html">
+                    <Link to="/">
                       <img src="assets/img/logo/yukceritalogo.png" alt="" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="footer-text">
                     <p>
@@ -87,16 +87,19 @@ const Layout = ({ children }) => {
                   <div className="footer-link">
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <Link to="/">Home</Link>
                       </li>
                       <li>
-                        <a href="#">Tentang Kami</a>
+                        <Link to="/about">About</Link>
                       </li>
                       <li>
-                        <a href="#">Konsultasi</a>
+                        <Link to="/konsultasi">Konsultasi</Link>
                       </li>
                       <li>
-                        <a href="#">Kontak</a>
+                        <Link to="/artikel">Artikel</Link>
+                      </li>
+                      <li>
+                        <Link to="/kontak">Contact</Link>
                       </li>
                     </ul>
                   </div>
@@ -142,9 +145,13 @@ const Layout = ({ children }) => {
               <div className="col-xl-3 col-lg-6 col-md-6 mb-30">
                 <h3 className="footer-title">Ikuti Kami</h3>
                 <div className="mb-50">
-                  <a href="#" className="c-btn" style={{ color: '#fffff' }}>
+                  <Link
+                    to="/konsultasi"
+                    className="c-btn"
+                    style={{ color: '#fffff' }}
+                  >
                     Konsultasi Sekarang
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
