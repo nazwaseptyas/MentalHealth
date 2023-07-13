@@ -57,85 +57,6 @@ const Layout = ({ children }) => {
             </div>
           </div>
         </div>
-
-        <div className="extra-info">
-          <div className="close-icon">
-            <button>
-              <i className="far fa-window-close" />
-            </button>
-          </div>
-          <div className="logo-side mb-30">
-            <a href="index.html">
-              <img src="/assets/img/logo/white-logo.png" alt="" />
-            </a>
-          </div>
-          <div className="side-info mb-30">
-            <div className="contact-list mb-30">
-              <h4>Office Address</h4>
-              <p>123/A, Miranda City Likaoli Prikano, Dope</p>
-            </div>
-            <div className="contact-list mb-30">
-              <h4>Phone Number</h4>
-              <p>+0989 7876 9865 9</p>
-              <p>+(090) 8765 86543 85</p>
-            </div>
-            <div className="contact-list mb-30">
-              <h4>Email Address</h4>
-              <p>
-                <a
-                  href="https://www.devsnews.com/cdn-cgi/l/email-protection"
-                  className="__cf_email__"
-                  data-cfemail="0861666e67486d70696578646d266b6765"
-                >
-                  [email&nbsp;protected]
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://www.devsnews.com/cdn-cgi/l/email-protection"
-                  className="__cf_email__"
-                  data-cfemail="e18499808c918d84cf8c80888da189948ccf828e8c"
-                >
-                  [email&nbsp;protected]
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="instagram">
-            <a href="#">
-              <img src="/assets/img/portfolio/p1.jpg" alt="" />
-            </a>
-            <a href="#">
-              <img src="/assets/img/portfolio/p2.jpg" alt="" />
-            </a>
-            <a href="#">
-              <img src="/assets/img/portfolio/p3.jpg" alt="" />
-            </a>
-            <a href="#">
-              <img src="/assets/img/portfolio/p4.jpg" alt="" />
-            </a>
-            <a href="#">
-              <img src="/assets/img/portfolio/p5.jpg" alt="" />
-            </a>
-            <a href="#">
-              <img src="/assets/img/portfolio/p6.jpg" alt="" />
-            </a>
-          </div>
-          <div className="social-icon-right mt-20">
-            <a href="#">
-              <i className="fab fa-facebook-f" />
-            </a>
-            <a href="#">
-              <i className="fab fa-twitter" />
-            </a>
-            <a href="#">
-              <i className="fab fa-google-plus-g" />
-            </a>
-            <a href="#">
-              <i className="fab fa-instagram" />
-            </a>
-          </div>
-        </div>
       </header>
       <main>{children}</main>
       <footer className="footer-style footer-04-style">
@@ -146,39 +67,34 @@ const Layout = ({ children }) => {
                 <div className="footer-wrapper">
                   <div className="footer-logo">
                     <a href="index.html">
-                      <img src="assets/img/logo/logo.png" alt="" />
+                      <img src="assets/img/logo/yukceritalogo.png" alt="" />
                     </a>
                   </div>
                   <div className="footer-text">
                     <p>
-                      Lorem ipsum dolor sit amet, cons ectetur adipisicing elit,
-                      sed do ei usmod tempor incididunt ut lab ore et dolore
-                      magna aliqua. Ut eni m ad minim veniam, quis nos trud
-                      exercitation ullamco laboris nisi ut aliquip ex ea
-                      commodo.
+                      YukCerita adalah sebuah website konseling sebaya yang
+                      ditujukan untuk membantu mahasiswa dalam mengatasi masalah
+                      pribadi, akademik, dan sosial.
                     </p>
                   </div>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-6 col-md-6 mb-30">
                 <div className="footer-wrapper ml-15">
-                  <h3 className="footer-title">Services</h3>
+                  <h3 className="footer-title">Features</h3>
                   <div className="footer-link">
                     <ul>
                       <li>
-                        <a href="#">Industrial Design</a>
+                        <a href="#">Home</a>
                       </li>
                       <li>
-                        <a href="#">Commercial Interior Design</a>
+                        <a href="#">Tentang Kami</a>
                       </li>
                       <li>
-                        <a href="#">Residencial Interior Design</a>
+                        <a href="#">Konsultasi</a>
                       </li>
                       <li>
-                        <a href="#">Detailed &amp; Phased Planning</a>
-                      </li>
-                      <li>
-                        <a href="#">Apartment Exterior Design</a>
+                        <a href="#">Kontak</a>
                       </li>
                     </ul>
                   </div>
@@ -193,7 +109,7 @@ const Layout = ({ children }) => {
                         <i className="fal fa-map-marker-alt" />
                       </div>
                       <div className="footer-address-text">
-                        <span>786/A Romada tower mall Brooklyn, NYC</span>
+                        <span>Depok, Jawa Barat</span>
                       </div>
                     </li>
                     <li>
@@ -202,8 +118,8 @@ const Layout = ({ children }) => {
                       </div>
                       <div className="footer-address-text">
                         <span>
-                          +987 876 765 765 65 <br />
-                          +(987) 787 876 876 87
+                          +62 8777 1030 559
+                          <br />
                         </span>
                       </div>
                     </li>
@@ -213,20 +129,8 @@ const Layout = ({ children }) => {
                       </div>
                       <div className="footer-address-text">
                         <span>
-                          <a
-                            href="https://www.devsnews.com/cdn-cgi/l/email-protection"
-                            className="__cf_email__"
-                            data-cfemail="3c55525a537c4b595e515d5550125f5351"
-                          >
-                            [email&nbsp;protected]
-                          </a>
-                          <a
-                            href="https://www.devsnews.com/cdn-cgi/l/email-protection"
-                            className="__cf_email__"
-                            data-cfemail="a2c8cdc0d1cbccc4cde2d5c7c0cfc3cbce8cc1cdcf"
-                          >
-                            [email&nbsp;protected]
-                          </a>
+                          nazwaseptyas@gmail.com
+                          <br />
                         </span>
                       </div>
                     </li>
@@ -234,12 +138,11 @@ const Layout = ({ children }) => {
                 </div>
               </div>
               <div className="col-xl-3 col-lg-6 col-md-6 mb-30">
-                <div className="footer-wrapper ml-25">
-                  <h3 className="footer-title">Featured Book</h3>
-                  <div className="footer-2-img pos-rel">
-                    <img src="assets/img/footer/03.jpg" alt="" />
-                    <span className="f-tag">Sale</span>
-                  </div>
+                <h3 className="footer-title">Ikuti Kami</h3>
+                <div className="mb-50">
+                  <a href="#" className="c-btn" style={{ color: '#fffff' }}>
+                    Konsultasi Sekarang
+                  </a>
                 </div>
               </div>
             </div>
@@ -251,8 +154,8 @@ const Layout = ({ children }) => {
               <div className="col-xl-6 col-lg-6 col-md-6">
                 <div className="copyright">
                   <p>
-                    Copyright <i className="far fa-copyright" /> 2020 Example.
-                    All rights reserved.
+                    Copyright <i className="far fa-copyright" /> 2023 Yuk
+                    Cerita. All rights reserved.
                   </p>
                 </div>
               </div>
