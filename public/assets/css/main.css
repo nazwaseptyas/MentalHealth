@@ -8113,8 +8113,9 @@ ul.cat li a:hover {
     padding: 0 28px;
     width: 100%;
     font-size: 18px;
-    color: #93b2ca;
+    color: black;
     font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contacts-us-form textarea {
@@ -8125,8 +8126,9 @@ ul.cat li a:hover {
     padding: 28px;
     width: 100%;
     font-size: 18px;
-    color: #93b2ca;
+    color: black;
     font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contacts-us-form-button button {
