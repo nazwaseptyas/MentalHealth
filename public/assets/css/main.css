@@ -3004,6 +3004,7 @@ label {
 .slider-caption span {
     display: inline-block;
     color: #36b65e;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -3023,6 +3024,7 @@ label {
     margin-top: 19px;
     letter-spacing: -0.3px;
     transform: translateX(-10px);
+    font-family: 'Poppins', sans-serif;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

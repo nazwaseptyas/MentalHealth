@@ -24,10 +24,7 @@ const Home = () => {
             }}
           >
             <div className="slider-active">
-              <div
-                className="single-slider slider-height d-flex align-items-center"
-                data-background="/assets/img/slider/01.jpg"
-              >
+              <div className="single-slider slider-height d-flex align-items-center">
                 <div className="container">
                   <div className="row">
                     <div className="col-xl-6 col-lg-7 col-md-9">
@@ -47,7 +44,7 @@ const Home = () => {
                         </div>
                         <div className="slider-btn">
                           <Link
-                            to="/kontak"
+                            to="/konsultasi"
                             data-animation="fadeInUp"
                             data-delay=".8s"
                             className="c-btn"
