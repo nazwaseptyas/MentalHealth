@@ -1,11 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from './layout';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
+  const API = import.meta.env.VITE_BASE_URL;
+
+  const navigate = useNavigate();
+  const [isLoading, setisLoading] = useState(false);
+
+  const [formErrors, setFormErrors] = useState({
+    email: '',
+    password: '',
+  });
+
+  const simpan = async (e) => {
+    e.preventDefault();
+    if (isLoading) return 'Loading';
+    const data = new FormData(e.target);
+    const formdata = Object.fromEntries(data.entries());
+    const { errors, isValid } = validateForm(formdata);
+    console.log(formdata);
+    if (!isValid) {
+      setFormErrors(errors);
+      return;
+    }
+    const { email, password } = formdata;
+
+    try {
+      setisLoading(true);
+      const response = await axios.post(
+        API + '/login',
+        { email, password },
+        {
+          withCredentials: true,
+        },
+      );
+
+      // if (response.status === 201) swal("Data Berhasil di daftarkan !")
+      if (response.status === 200) {
+        navigate('/');
+        Notify('Berhasil Login!');
+        return;
+      }
+      // navigate("/home");
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <Layout>
-        <form className="form_container">
+        <form className="form_container" onSubmit={simpan}>
           <div className="title_container">
             <p className="title">Masuk Akun</p>
             <span className="subtitle">
@@ -42,7 +90,7 @@ const Login = () => {
             <input
               placeholder="Email@gmail.com"
               title="Inpit title"
-              name="input-name"
+              name="email"
               type="text"
               className="input_field"
               id="email_field"
@@ -81,7 +129,7 @@ const Login = () => {
             <input
               placeholder="Password"
               title="Inpit title"
-              name="input-name"
+              name="password"
               type="password"
               className="input_field"
               id="password_field"
@@ -94,6 +142,30 @@ const Login = () => {
       </Layout>
     </>
   );
+};
+
+const validateForm = (formData) => {
+  const { email, password, nama } = formData;
+  let isValid = true;
+  const errors = {};
+
+  if (!email) {
+    errors.email = 'Email Tidak Boleh Kosong';
+    isValid = false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    errors.email = 'Email tidak valid !';
+    isValid = false;
+  }
+
+  if (!password) {
+    errors.password = 'Password Tidak Boleh Kosong';
+    isValid = false;
+  } else if (password.length < 6) {
+    errors.password = 'Password should be at least 6 characters long';
+    isValid = false;
+  }
+
+  return { errors, isValid };
 };
 
 export default Login;

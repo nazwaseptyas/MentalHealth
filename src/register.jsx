@@ -1,11 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from './layout';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import TextInput from './components/textInput';
 
 const Register = () => {
+  const API = import.meta.env.VITE_BASE_URL;
+
+  const navigate = useNavigate();
+  const [isLoading, setisLoading] = useState(false);
+
+  const [formErrors, setFormErrors] = useState({
+    email: '',
+    password: '',
+  });
+
+  const simpan = async (e) => {
+    e.preventDefault();
+    if (isLoading) return 'Loading';
+    const data = new FormData(e.target);
+    const formdata = Object.fromEntries(data.entries());
+    const { errors, isValid } = validateForm(formdata);
+    console.log(formdata);
+    if (!isValid) {
+      setFormErrors(errors);
+      return;
+    }
+    const { nama, nohp, email, password, alamat } = formdata;
+
+    try {
+      setisLoading(true);
+      const response = await axios.post(
+        API + '/register',
+        { nama, nohp, email, password, alamat },
+        {
+          withCredentials: true,
+        },
+      );
+
+      // if (response.status === 201) swal("Data Berhasil di daftarkan !")
+      if (response.status === 200) {
+        navigate('/login');
+        Notify('Berhasil Login!');
+        return;
+      }
+      // navigate("/home");
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <Layout>
-        <form className="form_container">
+        <form className="form_container" onSubmit={simpan}>
           <div className="title_container">
             <p className="title">Daftar Akun</p>
             <span className="subtitle">
@@ -39,7 +88,6 @@ const Register = () => {
                 d="M2 22V19C2 16.791 4.23858 15 7 15H17C19.7614 15 22 16.791 22 19V22"
               />
             </svg>
-
             <input
               placeholder="Nama Anda"
               name="name"
@@ -95,10 +143,37 @@ const Register = () => {
 
             <input
               placeholder="Nomor Telepon Anda"
-              name="phone"
+              name="nohp"
               type="number"
               className="input_field"
               id="phone_field"
+            />
+          </div>
+          <div className="input_container">
+            <label className="input_label" htmlFor="alamat_field">
+              Alamat
+            </label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="icon"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 22s-8-4.5-8-11a8 8 0 1116 0c0 6.5-8 11-8 11z"
+              />
+              <circle cx={12} cy={10} r={3} />
+            </svg>
+            <input
+              placeholder="Alamat Anda"
+              name="alamat"
+              type="text"
+              className="input_field"
+              id="alamat_field"
             />
           </div>
           <div className="input_container">
@@ -134,6 +209,9 @@ const Register = () => {
               className="input_field"
               id="email_field"
             />
+            {/* <p className="d-flex justify-content-start text-danger">
+              {formErrors.email.message}
+            </p> */}
           </div>
           <div className="input_container">
             <label className="input_label" htmlFor="password_field">
@@ -172,6 +250,9 @@ const Register = () => {
               className="input_field"
               id="password_field"
             />
+            {/* <p className="d-flex justify-content-start text-danger">
+              {formErrors.password.message}
+            </p> */}
           </div>
           <button title="Sign In" type="submit" className="sign-in_btn">
             <span>Daftar</span>
@@ -180,6 +261,42 @@ const Register = () => {
       </Layout>
     </>
   );
+};
+
+const Notify = (pesan) =>
+  toast.success(pesan, {
+    position: 'top-right',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  });
+
+const validateForm = (formData) => {
+  const { email, password, nama } = formData;
+  let isValid = true;
+  const errors = {};
+
+  if (!email) {
+    errors.email = 'Email Tidak Boleh Kosong';
+    isValid = false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    errors.email = 'Email tidak valid !';
+    isValid = false;
+  }
+
+  if (!password) {
+    errors.password = 'Password Tidak Boleh Kosong';
+    isValid = false;
+  } else if (password.length < 6) {
+    errors.password = 'Password should be at least 6 characters long';
+    isValid = false;
+  }
+
+  return { errors, isValid };
 };
 
 export default Register;
