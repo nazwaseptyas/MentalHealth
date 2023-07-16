@@ -157,6 +157,45 @@ const Layout = ({ children }) => {
             </div>
           </div>
         </div>
+        <div
+          style={{
+            margin: '20px',
+            padding: '20px',
+            backgroundColor: '#FF9F9F',
+            borderRadius: '18px',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="exclamation-circle"
+            className="svg-inline--fa fa-exclamation-circle fa-3x section5-fa"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            style={{ width: '24px', height: '24px' }}
+          >
+            <path
+              fill="currentColor"
+              d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+            ></path>
+          </svg>
+          <span style={{ marginLeft: '10px', fontSize: '13px' }}>
+            Yuk Cerita adalah platform yang fokus pada dukungan dan konseling
+            sebaya. Kami siap membantu Anda dalam mengatasi berbagai masalah dan
+            memberikan dukungan emosional. Untuk situasi darurat dan membutuhkan
+            bantuan segera terkait dengan percobaan bunuh diri, harap hubungi
+            layanan profesional yang bisa dijangkau segera yang tersedia di
+            wilayah anda.
+          </span>
+        </div>
+
+        <br />
+        <br />
+        <br />
         <div className="footer-botm-area pt-25 pb-25">
           <div className="container">
             <div className="row">
@@ -173,16 +212,13 @@ const Layout = ({ children }) => {
                   <a href="#">
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a href="#">
+                  <a href="https://twitter.com/nzwasalsa_">
                     <i className="fab fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-behance" />
                   </a>
                   <a href="#">
                     <i className="fab fa-youtube" />
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/nazwaseptyas/">
                     <i className="fab fa-linkedin" />
                   </a>
                 </div>

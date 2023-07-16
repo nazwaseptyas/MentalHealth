@@ -1,11 +1,4 @@
 @charset "UTF-8";
-
-/*  01. Theme default CSS
-/*----------------------------------------*/
-
-
-/* 1. Theme default css */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 body {
@@ -6112,7 +6105,7 @@ a .sup-text span {
     top: 0;
     right: 0;
     height: 100%;
-    background: #251e5e;
+    background: #36b65e;
     padding: 0 30px;
     color: #ffffff;
     line-height: 60px;
@@ -6120,7 +6113,7 @@ a .sup-text span {
 }
 
 .search-form button:hover {
-    background: #251e5e;
+    background: #309f53;
 }
 
 .widget {
@@ -6171,7 +6164,7 @@ button {
 }
 
 .service-list li a {
-    background: #f6f6f6;
+    background: #f6fbf4;
     display: block;
     padding: 17px 30px;
     color: #666;
@@ -6180,7 +6173,7 @@ button {
 }
 
 .service-list li a:hover {
-    background: #251e5e;
+    background: #43c90e;
     color: #ffffff;
 }
 
@@ -6605,7 +6598,7 @@ ul.cat li a:hover {
 }
 
 .post-comments {
-    border-bottom: 1px solid #eaedff;
+    border-bottom: 1px solid #f6fbf4;
     margin-bottom: 42px;
     padding-bottom: 46px;
 }
@@ -6721,7 +6714,7 @@ ul.cat li a:hover {
 }
 
 .conatct-post-form {
-    background: #f0f4f7;
+    background: #f6fbf4;
     padding: 50px;
 }
 
@@ -6732,7 +6725,7 @@ ul.cat li a:hover {
     padding: 0 30px;
     width: 100%;
     font-size: 14px;
-    color: #a7a7c1;
+    color: #f6fbf4;
 }
 
 .conatct-post-form textarea {
@@ -6741,7 +6734,7 @@ ul.cat li a:hover {
     margin-bottom: 20px;
     padding: 30px;
     width: 100%;
-    color: #a7a7c1;
+    color: #f6fbf4;
     font-size: 14px;
 }
 

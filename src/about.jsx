@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './layout';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -58,16 +59,16 @@ const About = () => {
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div className="about-img pos-rel mb-30">
                   <img src="assets/img/about/drjara.jpg" alt="" />
-                  <a className="download-btn" href="contact.html">
+                  <Link to="/kontak" className="download-btn">
                     <i className="fal fa-clouds" /> Download Cv
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-xl-5 col-lg-4 col-md-6">
                 <div className="about-11-wrapper mb-30 pl-50 pt-40">
                   <div className="section-title mb-40">
                     <span>Psikolog</span>
-                    <h2>Nama</h2>
+                    <h2>Nadjilah Fatin, S.Psi.</h2>
                     <div className="mb-40" />
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,

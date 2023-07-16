@@ -54,6 +54,7 @@ const Konsultasi = () => {
                             name="date"
                             type="date"
                             className="custom-date-input"
+                            style={{ fontSize: '14px' }}
                           />
                         </div>
                       </div>
@@ -61,8 +62,30 @@ const Konsultasi = () => {
                         <div className="contacts-icon contactss-phone">
                           <input
                             name="phone"
-                            type="tel"
+                            type="number"
                             placeholder="Masukkan Nomor Telepon"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="contacts-icon contactss-doctor">
+                          <input
+                            name="doctor"
+                            type="text"
+                            placeholder="Nama Dokter"
+                            value="Psikolog Nadjilah Fatin"
+                            readOnly
+                            style={{ fontSize: '14px' }}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <div className="contacts-icon contactss-address">
+                          <input
+                            name="address"
+                            type="text"
+                            placeholder="Masukkan Alamat"
                           />
                         </div>
                       </div>
@@ -73,16 +96,18 @@ const Konsultasi = () => {
                             id="comments"
                             cols={30}
                             rows={10}
-                            placeholder="Keluhan"
+                            placeholder="Keluhan Anda"
                             defaultValue={''}
                           />
                         </div>
                       </div>
-                      <div className="col-lg-12">
-                        <div className="contacts-us-form-button text-center">
-                          <button className="c-btn" type="submit">
-                            Kirim
-                          </button>
+                      <div className="row">
+                        <div className="col-lg-12 d-flex justify-content-center">
+                          <div className="contacts-us-form-button text-center">
+                            <button className="c-btn" type="submit">
+                              Kirim
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -24,7 +24,7 @@ const Artikel = () => {
                       </span>
                       <span>
                         <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Commnets (10)</Link>
+                        <Link to="/detail">Komentar (10)</Link>
                       </span>
                     </div>
                     <h4>
@@ -38,7 +38,7 @@ const Artikel = () => {
                       quaenventore veritatis quasi architecto beatae
                     </p>
                     <Link to="/detail" className="c-btn gray-btn">
-                      <span> </span> Read more <span />
+                      <span> </span> Selengkapnya <span />
                     </Link>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ const Artikel = () => {
                       </span>
                       <span>
                         <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Commnets (10)</Link>
+                        <Link to="/detail">Komentar (10)</Link>
                       </span>
                     </div>
                     <h4>
@@ -70,7 +70,7 @@ const Artikel = () => {
                       quaenventore veritatis quasi architecto beatae
                     </p>
                     <Link to="/detail" className="c-btn gray-btn">
-                      <span> </span> Read more <span />
+                      <span> </span> Selengkapnya <span />
                     </Link>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const Artikel = () => {
                       </span>
                       <span>
                         <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Commnets (10)</Link>
+                        <Link to="/detail">Komentar (10)</Link>
                       </span>
                     </div>
                     <h4>
@@ -102,7 +102,7 @@ const Artikel = () => {
                       quaenventore veritatis quasi architecto beatae
                     </p>
                     <Link to="/detail" className="c-btn gray-btn">
-                      <span> </span> Read more <span />
+                      <span> </span> Selengkapnya <span />
                     </Link>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ const Artikel = () => {
                       </span>
                       <span>
                         <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Commnets (10)</Link>
+                        <Link to="/detail">Komentar (10)</Link>
                       </span>
                     </div>
                     <h4>
@@ -134,7 +134,7 @@ const Artikel = () => {
                       quaenventore veritatis quasi architecto beatae
                     </p>
                     <Link to="/detail" className="c-btn gray-btn">
-                      <span> </span> Read more <span />
+                      <span> </span> Selengkapnya <span />
                     </Link>
                   </div>
                 </div>
@@ -142,106 +142,34 @@ const Artikel = () => {
               <div className="col-xl-4 col-lg-4 mb-30">
                 <div className="widget mb-40">
                   <form className="search-form">
-                    <input type="text" placeholder="Search..." />
+                    <input type="text" placeholder="Cari" />
                     <button type="submit">
                       <i className="fas fa-search" />
                     </button>
                   </form>
                 </div>
                 <div className="widget mb-40">
-                  <h3 className="widget-title">Popular Feeds</h3>
-                  <ul className="recent-posts">
-                    <li>
-                      <div className="widget-posts-image">
-                        <Link to="/detail">
-                          <img src="assets/img/blog/sd1.png" alt="" />
-                        </Link>
-                      </div>
-                      <div className="widget-posts-body">
-                        <h6 className="widget-posts-title">
-                          <Link to="/detail">
-                            Fluid Responsive Typography With CSS Poly Fluid
-                            Sizing.
-                          </Link>
-                        </h6>
-                        <div className="widget-posts-meta">
-                          October 18, 2018{' '}
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="widget-posts-image">
-                        <Link to="/detail">
-                          <img src="assets/img/blog/sd2.png" alt="" />
-                        </Link>
-                      </div>
-                      <div className="widget-posts-body">
-                        <h6 className="widget-posts-title">
-                          <Link to="/detail">
-                            An Abridged Cartoon Introdu Ction To WebAssembly.
-                          </Link>
-                        </h6>
-                        <div className="widget-posts-meta">
-                          October 24, 2018{' '}
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="widget-posts-image">
-                        <Link to="/detail">
-                          <img src="assets/img/blog/sd3.png" alt="" />
-                        </Link>
-                      </div>
-                      <div className="widget-posts-body">
-                        <h6 className="widget-posts-title">
-                          <Link to="/detail">
-                            Basic Patterns Mobile Navig Pros And Cons WebAss
-                          </Link>
-                        </h6>
-                        <div className="widget-posts-meta">
-                          October 28, 2018{' '}
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="widget mb-40">
-                  <h3 className="widget-title">Categories</h3>
+                  <h3 className="widget-title">Kategori</h3>
                   <ul className="service-list">
                     <li>
-                      <Link to="/detail">Sea Freight </Link>
+                      <Link to="/detail">Semua Kategori </Link>
                     </li>
                     <li>
-                      <Link to="/detail">Road Freight </Link>
+                      <Link to="/detail">Industri dan Organisasi </Link>
                     </li>
                     <li>
-                      <Link to="/detail">Packaging </Link>
+                      <Link to="/detail">Karir </Link>
                     </li>
                     <li>
-                      <Link to="/detail">Supply Chain </Link>
+                      <Link to="/detail">Keluarga </Link>
                     </li>
                     <li>
-                      <Link to="/detail">Home Delivery </Link>
+                      <Link to="/detail">Masalah Diri </Link>
+                    </li>
+                    <li>
+                      <Link to="/detail">Trauma </Link>
                     </li>
                   </ul>
-                </div>
-
-                <div className="widget">
-                  <h3 className="widget-title">Popular Tags</h3>
-                  <div className="tag">
-                    <Link to="/detail">Popular</Link>
-                    <Link to="/detail">desgin</Link>
-                    <Link to="/detail">usability</Link>
-                    <Link to="/detail">develop</Link>
-                    <Link to="/detail">consult</Link>
-                    <Link to="/detail">icon</Link>
-                    <Link to="/detail">HTML</Link>
-                    <Link to="/detail">ux</Link>
-                    <Link to="/detail">business</Link>
-                    <Link to="/detail">kit</Link>
-                    <Link to="/detail">keyboard</Link>
-                    <Link to="/detail"></Link>
-                  </div>
                 </div>
               </div>
             </div>

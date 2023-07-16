@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './layout';
+import { Link } from 'react-router-dom';
 
 const Detail = () => {
   return (
@@ -17,17 +18,17 @@ const Detail = () => {
                     <div className="blog-meta">
                       <span>
                         <i className="far fa-calendar-alt" />{' '}
-                        <a href="blog-details.html">05 May 2020</a>
+                        <Link to="/detail">05 May 2020</Link>
                       </span>
                       <span>
                         <i className="far fa-comments" />{' '}
-                        <a href="blog-details.html">Commnets (10)</a>
+                        <Link to="/detail">Komentar (10)</Link>
                       </span>
                     </div>
                     <h4>
-                      <a href="blog-details.html">
+                      <Link to="/detail">
                         Launching Make App Store Optimization Foundation
-                      </a>
+                      </Link>
                     </h4>
                     <p>
                       Sed perspicia unde omnis iste natus error voluptatem
@@ -82,18 +83,11 @@ const Detail = () => {
                         non proident, sunt in culpa qui officia.
                       </p>
                     </div>
-                    <div className="row mt-50">
-                      <div className="col-xl-8 col-lg-8 col-md-8 mb-15">
-                        <div className="blog-post-tag">
-                          <span>Releted Tags</span>
-                          <a href="#">organic</a>
-                          <a href="#">Foods</a>
-                          <a href="#">tasty</a>
-                        </div>
-                      </div>
+                    <div className="row mt-50 justify-content-end">
+                      {' '}
                       <div className="col-xl-4 col-lg-4 col-md-4 mb-15">
                         <div className="blog-share-icon text-left text-md-right">
-                          <span>Share: </span>
+                          <span>Bagikan : </span>
                           <a href="#">
                             <i className="fab fa-facebook-f" />
                           </a>
@@ -104,10 +98,10 @@ const Detail = () => {
                             <i className="fab fa-instagram" />
                           </a>
                           <a href="#">
-                            <i className="fab fa-google-plus-g" />
+                            <i className="fab fa-whatsapp" />
                           </a>
                           <a href="#">
-                            <i className="fab fa-vimeo-v" />
+                            <i className="fab fa-linkedin" />
                           </a>
                         </div>
                       </div>
@@ -118,21 +112,8 @@ const Detail = () => {
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="bakix-navigation b-next-post text-left mb-30">
-                          <span>
-                            <a href="#">Prev Post</a>
-                          </span>
                           <h4>
-                            <a href="#">Tips on Minimalist</a>
-                          </h4>
-                        </div>
-                      </div>
-                      <div className="col-xl-6 col-lg-6 col-md-6">
-                        <div className="bakix-navigation b-next-post text-left text-md-right  mb-30">
-                          <span>
-                            <a href="#">Next Post</a>
-                          </span>
-                          <h4>
-                            <a href="#">Tips on Minimalist</a>
+                            <Link to="/detail">Author</Link>
                           </h4>
                         </div>
                       </div>
@@ -157,20 +138,20 @@ const Detail = () => {
                             <i className="fab fa-twitter" />
                           </a>
                           <a href="#">
-                            <i className="fab fa-behance-square" />
+                            <i className="fab fa-linkedin" />
                           </a>
                           <a href="#">
                             <i className="fab fa-youtube" />
                           </a>
                           <a href="#">
-                            <i className="fab fa-vimeo-v" />
+                            <i className="fab fa-instagram" />
                           </a>
                         </div>
                       </div>
                     </div>
                     <div className="post-comments">
                       <div className="blog-coment-title mb-30">
-                        <h2>03 Comments</h2>
+                        <h2>Komentar</h2>
                       </div>
                       <div className="latest-comments">
                         <ul>
@@ -262,7 +243,7 @@ const Detail = () => {
                     </div>
                     <div className="post-comments-form">
                       <div className="post-comments-title">
-                        <h2>Post Comments</h2>
+                        <h2>Tambahkan Komentar</h2>
                       </div>
                       <form
                         id="contacts-form"
@@ -272,12 +253,15 @@ const Detail = () => {
                         <div className="row">
                           <div className="col-xl-12">
                             <div className="contact-icon contacts-name">
-                              <input type="text" placeholder="Your Name" />
+                              <input type="text" placeholder="Masukkan Nama" />
                             </div>
                           </div>
                           <div className="col-xl-12">
                             <div className="contact-icon contacts-email">
-                              <input type="email" placeholder="Your Email" />
+                              <input
+                                type="email"
+                                placeholder="Masukkan Email"
+                              />
                             </div>
                           </div>
                           <div className="col-xl-12">
@@ -287,15 +271,14 @@ const Detail = () => {
                                 id="comments"
                                 cols={30}
                                 rows={10}
-                                placeholder="Your Comments"
+                                placeholder="Komentar Anda"
                                 defaultValue={''}
-                              />
+                              ></textarea>
                             </div>
                           </div>
                           <div className="col-xl-12">
                             <button className="c-btn" type="submit">
-                              {' '}
-                              <span> </span> Post comment <span> </span>
+                              <span>Kirim</span>
                             </button>
                           </div>
                         </div>
@@ -307,125 +290,34 @@ const Detail = () => {
               <div className="col-xl-4 col-lg-4 mb-30">
                 <div className="widget mb-40">
                   <form className="search-form">
-                    <input type="text" placeholder="Search..." />
+                    <input type="text" placeholder="Cari" />
                     <button type="submit">
                       <i className="fas fa-search" />
                     </button>
                   </form>
                 </div>
                 <div className="widget mb-40">
-                  <h3 className="widget-title">Popular Feeds</h3>
-                  <ul className="recent-posts">
-                    <li>
-                      <div className="widget-posts-image">
-                        <a href="blog-details.html">
-                          <img src="assets/img/blog/sd1.png" alt="" />
-                        </a>
-                      </div>
-                      <div className="widget-posts-body">
-                        <h6 className="widget-posts-title">
-                          <a href="blog-details.html">
-                            Fluid Responsive Typography With CSS Poly Fluid
-                            Sizing.
-                          </a>
-                        </h6>
-                        <div className="widget-posts-meta">
-                          October 18, 2018{' '}
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="widget-posts-image">
-                        <a href="blog-details.html">
-                          <img src="assets/img/blog/sd2.png" alt="" />
-                        </a>
-                      </div>
-                      <div className="widget-posts-body">
-                        <h6 className="widget-posts-title">
-                          <a href="#">
-                            An Abridged Cartoon Introdu Ction To WebAssembly.
-                          </a>
-                        </h6>
-                        <div className="widget-posts-meta">
-                          October 24, 2018{' '}
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="widget-posts-image">
-                        <a href="#">
-                          <img src="assets/img/blog/sd3.png" alt="" />
-                        </a>
-                      </div>
-                      <div className="widget-posts-body">
-                        <h6 className="widget-posts-title">
-                          <a href="#">
-                            Basic Patterns Mobile Navig Pros And Cons WebAss
-                          </a>
-                        </h6>
-                        <div className="widget-posts-meta">
-                          October 28, 2018{' '}
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="widget mb-40">
-                  <h3 className="widget-title">Categories</h3>
+                  <h3 className="widget-title">Kategori</h3>
                   <ul className="service-list">
                     <li>
-                      <a href="blog-details.html">Sea Freight </a>
+                      <Link to="/detail">Semua Kategori </Link>
                     </li>
                     <li>
-                      <a href="blog-details.html">Road Freight </a>
+                      <Link to="/detail">Industri dan Organisasi </Link>
                     </li>
                     <li>
-                      <a href="blog-details.html">Packaging </a>
+                      <Link to="/detail">Karir </Link>
                     </li>
                     <li>
-                      <a href="blog-details.html">Supply Chain </a>
+                      <Link to="/detail">Keluarga </Link>
                     </li>
                     <li>
-                      <a href="blog-details.html">Home Delivery </a>
+                      <Link to="/detail">Masalah Diri </Link>
+                    </li>
+                    <li>
+                      <Link to="/detail">Trauma </Link>
                     </li>
                   </ul>
-                </div>
-                <div className="widget mb-40">
-                  <h3 className="widget-title">Social Profile</h3>
-                  <div className="social-profile">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-behance" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
-                </div>
-                <div className="widget">
-                  <h3 className="widget-title">Popular Tags</h3>
-                  <div className="tag">
-                    <a href="blog-details.html">Popular</a>
-                    <a href="blog-details.html">desgin</a>
-                    <a href="blog-details.html">usability</a>
-                    <a href="blog-details.html">develop</a>
-                    <a href="blog-details.html">consult</a>
-                    <a href="blog-details.html">icon</a>
-                    <a href="blog-details.html">HTML</a>
-                    <a href="blog-details.html">ux</a>
-                    <a href="blog-details.html">business</a>
-                    <a href="blog-details.html">kit</a>
-                    <a href="blog-details.html">keyboard</a>
-                    <a href="blog-details.html">tech</a>
-                  </div>
                 </div>
               </div>
             </div>

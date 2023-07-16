@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './layout';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -7,14 +8,14 @@ const Home = () => {
       <Layout>
         <section className="hero-area pos-rel mr-30 ml-30">
           <div className="slider-icon d-none d-xl-block">
-            <a href="/contact">
+            <Link to="/kontak">
               <i className="fal fa-comments" />
-            </a>
+            </Link>
           </div>
           <div className="slider-side d-none d-xl-block">
-            <a href="#" className="c-btn">
+            <Link to="/konsultasi" className="c-btn">
               <span /> Gratis Konsultasi
-            </a>
+            </Link>
           </div>
           <div
             className="hero-slider"
@@ -45,14 +46,14 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="slider-btn">
-                          <a
+                          <Link
+                            to="/kontak"
                             data-animation="fadeInUp"
                             data-delay=".8s"
-                            href="contact.html"
                             className="c-btn"
                           >
                             Konsultasi sekarang
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -62,7 +63,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* hero-area end */}
 
         {/* number-area-start */}
         <div className="number-area pb-70">
@@ -186,6 +186,26 @@ const Home = () => {
           </div>
         </div>
         <br />
+        <br />
+        <br />
+        <div
+          className="cta-area pb-110 pt-120"
+          style={{ backgroundImage: "url('assets/img/bg/mhs1.jpeg')" }}
+        >
+          <div className="container">
+            <div className="row no-gutters">
+              <div className="col-xl-8 col-lg-8 col-md-8">
+                <div className="section-title section-title-white mr-30 mb-40">
+                  <span className="white-color">
+                    Jaga kesehatan mentalmu sebagai prioritas utama, Kemudian
+                    berikan yang terbaik dalam setiap tugas dan tanggung
+                    jawabmu.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="cta-area pb-110 pt-120">
           <div className="row">
             <div className="col-12">
@@ -254,13 +274,13 @@ const Home = () => {
                             akhir
                           </p>
                           <div className="mb-50" />
-                          <a
-                            href="#"
+                          <Link
+                            to="/konsultasi"
                             className="c-btn"
                             style={{ color: '#fffff' }}
                           >
                             Konsultasi Sekarang
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
