@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => {
+  let user = localStorage.getItem('user');
+
   return (
     <>
       <header>
