@@ -1,0 +1,14 @@
+###
+POST https://mental-health-api.vercel.app/tambah-konsultasi
+Content-Type: application/json
+
+{
+  "alamat": "jln baru",
+  "doctor": "Psikolog Nadjilah Fatin",
+  "email": "nazwasalsabila1002@gmail.com",
+  "keluhan": "oo",
+  "nama": "Nazwa",
+  "nohp": "0894754758453",
+  "tanggal": "2023-07-16"
+}
+

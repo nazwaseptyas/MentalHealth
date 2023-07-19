@@ -90,7 +90,7 @@ const Register = () => {
             </svg>
             <input
               placeholder="Nama Anda"
-              name="name"
+              name="nama"
               type="text"
               className="input_field"
               id="name_field"

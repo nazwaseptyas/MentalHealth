@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from './layout';
-
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 const Konsultasi = () => {
+  const API = import.meta.env.VITE_BASE_URL;
+
+  const navigate = useNavigate();
+  const [isLoading, setisLoading] = useState(false);
+
+  const simpan = async (e) => {
+    e.preventDefault();
+    if (isLoading) return 'Loading';
+    const data = new FormData(e.target);
+    const formdata = Object.fromEntries(data.entries());
+
+    const { nama, nohp, email, alamat, keluhan, tanggal } = formdata;
+
+    try {
+      setisLoading(true);
+      const response = await axios.post(
+        API + '/tambah-konsultasi',
+        { nama, nohp, email, alamat, keluhan, tanggal },
+        {
+          withCredentials: true,
+        },
+      );
+
+      // if (response.status === 201) swal("Data Berhasil di daftarkan !")
+      if (response.status === 200) {
+        Notify('Berhasil Tambah Data !');
+        return;
+      }
+      // navigate("/home");
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <Layout>
@@ -25,14 +61,15 @@ const Konsultasi = () => {
                   <form
                     id="contacts-us-form"
                     className="contacts-us-form"
-                    action="https://www.devsnews.com/template/mindpress/mindpress/assets/mail.php"
-                    method="POST"
+                    // action="https://www.devsnews.com/template/mindpress/mindpress/assets/mail.php"
+                    // method="POST"
+                    onSubmit={simpan}
                   >
                     <div className="row">
                       <div className="col-lg-6 col-md-12">
                         <div className="contacts-icon contactss-name">
                           <input
-                            name="name"
+                            name="nama"
                             type="text"
                             placeholder="Masukkan Nama"
                           />
@@ -51,7 +88,7 @@ const Konsultasi = () => {
                         <div className="contacts-icon contactss-date">
                           <input
                             id="date"
-                            name="date"
+                            name="tanggal"
                             type="date"
                             className="custom-date-input"
                             style={{ fontSize: '14px' }}
@@ -61,7 +98,7 @@ const Konsultasi = () => {
                       <div className="col-lg-6 col-md-12">
                         <div className="contacts-icon contactss-phone">
                           <input
-                            name="phone"
+                            name="nohp"
                             type="number"
                             placeholder="Masukkan Nomor Telepon"
                           />
@@ -83,7 +120,7 @@ const Konsultasi = () => {
                       <div className="col-lg-12">
                         <div className="contacts-icon contactss-address">
                           <input
-                            name="address"
+                            name="alamat"
                             type="text"
                             placeholder="Masukkan Alamat"
                           />
@@ -92,7 +129,7 @@ const Konsultasi = () => {
                       <div className="col-lg-12">
                         <div className="contacts-icon contactss-message">
                           <textarea
-                            name="message"
+                            name="keluhan"
                             id="comments"
                             cols={30}
                             rows={10}
@@ -122,5 +159,17 @@ const Konsultasi = () => {
     </>
   );
 };
+
+const Notify = (pesan) =>
+  toast.success(pesan, {
+    position: 'top-right',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  });
 
 export default Konsultasi;

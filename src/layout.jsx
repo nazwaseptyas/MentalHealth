@@ -55,6 +55,33 @@ const Layout = ({ children }) => {
                   </Link>
                 </div>
               </div>
+              <div className="dropdown-center">
+                <a
+                  className="btn btn-white dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="/assets/img/icon/user.svg" alt="" />
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action two
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action three
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="col-12">
               <div className="mobile-menu" />
