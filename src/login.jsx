@@ -3,6 +3,7 @@ import Layout from './layout';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import Loading from './loading';
 
 const Login = () => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -56,6 +57,7 @@ const Login = () => {
       <Layout>
         <form className="form_container" onSubmit={simpan}>
           <div className="title_container">
+            <Loading />
             <p className="title">Masuk Akun</p>
             <span className="subtitle">
               Masuk akun sekarang dan mulailah konsultasi sekarang juga.
@@ -144,7 +146,6 @@ const Login = () => {
     </>
   );
 };
-
 
 const validateForm = (formData) => {
   const { email, password, nama } = formData;
