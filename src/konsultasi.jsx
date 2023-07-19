@@ -3,6 +3,7 @@ import Layout from './layout';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import Loading from './loading';
 const Konsultasi = () => {
   const API = import.meta.env.VITE_BASE_URL;
 
@@ -21,26 +22,33 @@ const Konsultasi = () => {
       setisLoading(true);
       const response = await axios.post(
         API + '/tambah-konsultasi',
-        { nama, nohp, email, alamat, keluhan, tanggal },
-        {
-          withCredentials: true,
-        },
+        { nama, nohp, email, alamat, keluhan, tanggal }
+
       );
 
       // if (response.status === 201) swal("Data Berhasil di daftarkan !")
-      if (response.status === 200) {
-        Notify('Berhasil Tambah Data !');
-        return;
+      if (response.status === 201) {
+
+        toast.success('Data Berhasil ditambah!', {
+          position: toast.POSITION.TOP_RIGHT, // Atur posisi toast (bisa diganti dengan TOP_LEFT, TOP_CENTER, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT)
+          autoClose: 3000, // Atur waktu otomatis menutup toast (dalam milidetik), misalnya 3000ms = 3 detik
+        })
+        // return;
       }
       // navigate("/home");
+      setisLoading(false);
       console.log(response);
     } catch (error) {
       console.log(error);
+      setisLoading(false);
+
     }
   };
   return (
     <>
       <Layout>
+        <ToastContainer />
+
         <div className="contact-us-area pt-120 pb-120">
           <div className="container">
             <div className="row justify-content-center">
@@ -142,7 +150,7 @@ const Konsultasi = () => {
                         <div className="col-lg-12 d-flex justify-content-center">
                           <div className="contacts-us-form-button text-center">
                             <button className="c-btn" type="submit">
-                              Kirim
+                              {isLoading ? <Loading /> : 'Kirim'}
                             </button>
                           </div>
                         </div>

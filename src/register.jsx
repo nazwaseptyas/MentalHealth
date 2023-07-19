@@ -22,7 +22,7 @@ const Register = () => {
     const data = new FormData(e.target);
     const formdata = Object.fromEntries(data.entries());
     const { errors, isValid } = validateForm(formdata);
-    console.log(formdata);
+    // console.log(formdata);
     // return
     if (!isValid) {
       setFormErrors(errors);
