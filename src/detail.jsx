@@ -21,8 +21,8 @@ const Detail = () => {
                         <Link to="/detail">05 May 2020</Link>
                       </span>
                       <span>
-                        <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Komentar (10)</Link>
+                        <i className="far fa-user" />{' '}
+                        <Link to="/detail">Penulis</Link>
                       </span>
                     </div>
                     <h4>
@@ -83,207 +83,6 @@ const Detail = () => {
                         non proident, sunt in culpa qui officia.
                       </p>
                     </div>
-                    <div className="row mt-50 justify-content-end">
-                      {' '}
-                      <div className="col-xl-4 col-lg-4 col-md-4 mb-15">
-                        <div className="blog-share-icon text-left text-md-right">
-                          <span>Bagikan : </span>
-                          <a href="#">
-                            <i className="fab fa-facebook-f" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-twitter" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-whatsapp" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-linkedin" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-12">
-                        <div className="navigation-border pt-50 mt-40" />
-                      </div>
-                      <div className="col-xl-6 col-lg-6 col-md-6">
-                        <div className="bakix-navigation b-next-post text-left mb-30">
-                          <h4>
-                            <Link to="/detail">Author</Link>
-                          </h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="b-author mt-40 mb-60">
-                      <div className="author-img">
-                        <img src="assets/img/blog/me.png" alt="" />
-                      </div>
-                      <div className="author-text">
-                        <h3>MD. Salim Rana</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip .
-                        </p>
-                        <div className="author-icon">
-                          <a href="#">
-                            <i className="fab fa-facebook-f" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-twitter" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-linkedin" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-youtube" />
-                          </a>
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="post-comments">
-                      <div className="blog-coment-title mb-30">
-                        <h2>Komentar</h2>
-                      </div>
-                      <div className="latest-comments">
-                        <ul>
-                          <li>
-                            <div className="comments-box">
-                              <div className="comments-avatar">
-                                <img
-                                  src="assets/img/blog/comments1.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="comments-text">
-                                <div className="avatar-name">
-                                  <h5>Karon Balina</h5>
-                                  <span>19th May 2018</span>
-                                  <a className="reply" href="#">
-                                    <i className="fas fa-reply" />
-                                    Reply
-                                  </a>
-                                </div>
-                                <p>
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.
-                                  Ut enim ad minim veniam, quis nostrud
-                                  exercitation ullamco laboris nisi ut aliquip
-                                  ex ea commodo consequat.
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                          <li className="children">
-                            <div className="comments-box">
-                              <div className="comments-avatar">
-                                <img
-                                  src="assets/img/blog/comments2.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="comments-text">
-                                <div className="avatar-name">
-                                  <h5>Julias Roy</h5>
-                                  <span>19th May 2018</span>
-                                  <a className="reply" href="#">
-                                    <i className="fas fa-reply" />
-                                    Reply
-                                  </a>
-                                </div>
-                                <p>
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.
-                                  Ut enim ad minim veniam, quis nostrud
-                                  exercitation ullamco laboris nisi ut aliquip.
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="comments-box">
-                              <div className="comments-avatar">
-                                <img
-                                  src="assets/img/blog/comments3.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="comments-text">
-                                <div className="avatar-name">
-                                  <h5>Arista Williamson</h5>
-                                  <span>19th May 2018</span>
-                                  <a className="reply" href="#">
-                                    <i className="fas fa-reply" />
-                                    Reply
-                                  </a>
-                                </div>
-                                <p>
-                                  Lorem ipsum dolor sit amet, consectetur
-                                  adipisicing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.
-                                  Ut enim ad minim veniam, quis nostrud
-                                  exercitation ullamco laboris nisi ut aliquip
-                                  ex ea commodo consequat.
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="post-comments-form">
-                      <div className="post-comments-title">
-                        <h2>Tambahkan Komentar</h2>
-                      </div>
-                      <form
-                        id="contacts-form"
-                        className="conatct-post-form"
-                        action="#"
-                      >
-                        <div className="row">
-                          <div className="col-xl-12">
-                            <div className="contact-icon contacts-name">
-                              <input type="text" placeholder="Masukkan Nama" />
-                            </div>
-                          </div>
-                          <div className="col-xl-12">
-                            <div className="contact-icon contacts-email">
-                              <input
-                                type="email"
-                                placeholder="Masukkan Email"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-xl-12">
-                            <div className="contact-icon contacts-message">
-                              <textarea
-                                name="comments"
-                                id="comments"
-                                cols={30}
-                                rows={10}
-                                placeholder="Komentar Anda"
-                                defaultValue={''}
-                              ></textarea>
-                            </div>
-                          </div>
-                          <div className="col-xl-12">
-                            <button className="c-btn" type="submit">
-                              <span>Kirim</span>
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -297,25 +96,59 @@ const Detail = () => {
                   </form>
                 </div>
                 <div className="widget mb-40">
-                  <h3 className="widget-title">Kategori</h3>
-                  <ul className="service-list">
+                  <h3 className="widget-title">Artikel Terkait</h3>
+                  <ul className="recent-posts">
                     <li>
-                      <Link to="/detail">Semua Kategori </Link>
+                      <div className="widget-posts-image">
+                        <a href="blog-details.html">
+                          <img src="assets/img/blog/sd1.png" alt="" />
+                        </a>
+                      </div>
+                      <div className="widget-posts-body">
+                        <h6 className="widget-posts-title">
+                          <a href="blog-details.html">
+                            Fluid Responsive Typography With CSS Poly Fluid
+                            Sizing.
+                          </a>
+                        </h6>
+                        <div className="widget-posts-meta">
+                          October 18, 2018{' '}
+                        </div>
+                      </div>
                     </li>
                     <li>
-                      <Link to="/detail">Industri dan Organisasi </Link>
+                      <div className="widget-posts-image">
+                        <a href="blog-details.html">
+                          <img src="assets/img/blog/sd2.png" alt="" />
+                        </a>
+                      </div>
+                      <div className="widget-posts-body">
+                        <h6 className="widget-posts-title">
+                          <a href="#">
+                            An Abridged Cartoon Introdu Ction To WebAssembly.
+                          </a>
+                        </h6>
+                        <div className="widget-posts-meta">
+                          October 24, 2018{' '}
+                        </div>
+                      </div>
                     </li>
                     <li>
-                      <Link to="/detail">Karir </Link>
-                    </li>
-                    <li>
-                      <Link to="/detail">Keluarga </Link>
-                    </li>
-                    <li>
-                      <Link to="/detail">Masalah Diri </Link>
-                    </li>
-                    <li>
-                      <Link to="/detail">Trauma </Link>
+                      <div className="widget-posts-image">
+                        <a href="#">
+                          <img src="assets/img/blog/sd3.png" alt="" />
+                        </a>
+                      </div>
+                      <div className="widget-posts-body">
+                        <h6 className="widget-posts-title">
+                          <a href="#">
+                            Basic Patterns Mobile Navig Pros And Cons WebAss
+                          </a>
+                        </h6>
+                        <div className="widget-posts-meta">
+                          October 28, 2018{' '}
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>

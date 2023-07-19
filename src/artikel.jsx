@@ -23,8 +23,8 @@ const Artikel = () => {
                         <Link to="/detail">05 May 2020</Link>
                       </span>
                       <span>
-                        <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Komentar (10)</Link>
+                        <i className="far fa-user" />{' '}
+                        <Link to="/detail">Penulis</Link>
                       </span>
                     </div>
                     <h4>
@@ -55,8 +55,8 @@ const Artikel = () => {
                         <Link to="/detail">05 May 2020</Link>
                       </span>
                       <span>
-                        <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Komentar (10)</Link>
+                        <i className="far fa-user" />{' '}
+                        <Link to="/detail">Penulis</Link>
                       </span>
                     </div>
                     <h4>
@@ -87,8 +87,8 @@ const Artikel = () => {
                         <Link to="/detail">05 May 2020</Link>
                       </span>
                       <span>
-                        <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Komentar (10)</Link>
+                        <i className="far fa-user" />{' '}
+                        <Link to="/detail">Penulis</Link>
                       </span>
                     </div>
                     <h4>
@@ -119,8 +119,8 @@ const Artikel = () => {
                         <Link to="/detail">05 May 2020</Link>
                       </span>
                       <span>
-                        <i className="far fa-comments" />{' '}
-                        <Link to="/detail">Komentar (10)</Link>
+                        <i className="far fa-user" />{' '}
+                        <Link to="/detail">Penulis</Link>
                       </span>
                     </div>
                     <h4>
@@ -149,25 +149,59 @@ const Artikel = () => {
                   </form>
                 </div>
                 <div className="widget mb-40">
-                  <h3 className="widget-title">Kategori</h3>
-                  <ul className="service-list">
+                  <h3 className="widget-title">Artikel Terkait</h3>
+                  <ul className="recent-posts">
                     <li>
-                      <Link to="/detail">Semua Kategori </Link>
+                      <div className="widget-posts-image">
+                        <a href="blog-details.html">
+                          <img src="assets/img/blog/sd1.png" alt="" />
+                        </a>
+                      </div>
+                      <div className="widget-posts-body">
+                        <h6 className="widget-posts-title">
+                          <a href="blog-details.html">
+                            Fluid Responsive Typography With CSS Poly Fluid
+                            Sizing.
+                          </a>
+                        </h6>
+                        <div className="widget-posts-meta">
+                          October 18, 2018{' '}
+                        </div>
+                      </div>
                     </li>
                     <li>
-                      <Link to="/detail">Industri dan Organisasi </Link>
+                      <div className="widget-posts-image">
+                        <a href="blog-details.html">
+                          <img src="assets/img/blog/sd2.png" alt="" />
+                        </a>
+                      </div>
+                      <div className="widget-posts-body">
+                        <h6 className="widget-posts-title">
+                          <a href="#">
+                            An Abridged Cartoon Introdu Ction To WebAssembly.
+                          </a>
+                        </h6>
+                        <div className="widget-posts-meta">
+                          October 24, 2018{' '}
+                        </div>
+                      </div>
                     </li>
                     <li>
-                      <Link to="/detail">Karir </Link>
-                    </li>
-                    <li>
-                      <Link to="/detail">Keluarga </Link>
-                    </li>
-                    <li>
-                      <Link to="/detail">Masalah Diri </Link>
-                    </li>
-                    <li>
-                      <Link to="/detail">Trauma </Link>
+                      <div className="widget-posts-image">
+                        <a href="#">
+                          <img src="assets/img/blog/sd3.png" alt="" />
+                        </a>
+                      </div>
+                      <div className="widget-posts-body">
+                        <h6 className="widget-posts-title">
+                          <a href="#">
+                            Basic Patterns Mobile Navig Pros And Cons WebAss
+                          </a>
+                        </h6>
+                        <div className="widget-posts-meta">
+                          October 28, 2018{' '}
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
