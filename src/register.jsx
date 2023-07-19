@@ -23,6 +23,7 @@ const Register = () => {
     const formdata = Object.fromEntries(data.entries());
     const { errors, isValid } = validateForm(formdata);
     console.log(formdata);
+    // return
     if (!isValid) {
       setFormErrors(errors);
       return;
@@ -42,7 +43,7 @@ const Register = () => {
       // if (response.status === 201) swal("Data Berhasil di daftarkan !")
       if (response.status === 200) {
         navigate('/login');
-        Notify('Berhasil Login!');
+        Notify('Berhasil Daftar!');
         return;
       }
       // navigate("/home");

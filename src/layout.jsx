@@ -1,10 +1,28 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Notify } from './toast';
 
 const Layout = ({ children }) => {
   let user = localStorage.getItem('user');
-
+  // console.log(user);
+  // const 
+  // console.log();
+  const navigate = useNavigate()
+  const logout = () => {
+    localStorage.removeItem('user');
+    // Notify('Logout Berhasil')
+    navigate('/')
+    toast.success('Logout berhasil!', {
+      position: toast.POSITION.TOP_RIGHT, // Atur posisi toast (bisa diganti dengan TOP_LEFT, TOP_CENTER, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT)
+      autoClose: 3000, // Atur waktu otomatis menutup toast (dalam milidetik), misalnya 3000ms = 3 detik
+    });
+  }
   return (
     <>
+      <ToastContainer />
+
       <header>
         <div className="container-fluid">
           <div className="row align-items-center">
@@ -43,7 +61,39 @@ const Layout = ({ children }) => {
               </div>
             </div>
             <div className="col-xl-3 col-lg-3">
-              <div className="header-right d-none d-lg-block">
+              {user ? (
+                // <div className="">
+                //   <p>dasdas</p>
+                // </div>
+                < div className='row'>
+                  <div className="col-6" style={{ display: "flex", alignItems: "center", justifyContent: "end" }}>Halo , {JSON.parse(user).user.nama}</div>
+                  <div className="col-6">
+                    <div className="dropdown-center"  >
+                      <a
+                        className="btn btn-white dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="/assets/img/icon/user.svg" alt="" />
+                      </a>
+                      <ul className="dropdown-menu" style={{ marginLeft: "-47px" }}>
+                        <li>
+                          <Link className="dropdown-item" href="#">
+                            Profil
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={logout} className="dropdown-item" href="#">
+                            Logout
+                          </Link>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ) : (<div className="header-right d-none d-lg-block">
                 <div className="header-button f-right">
                   <Link to="/login" className="c-btn">
                     Masuk
@@ -54,41 +104,16 @@ const Layout = ({ children }) => {
                     Daftar
                   </Link>
                 </div>
-              </div>
-              <div className="dropdown-center">
-                <a
-                  className="btn btn-white dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img src="/assets/img/icon/user.svg" alt="" />
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action two
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action three
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              </div>)}
+
+
             </div>
             <div className="col-12">
               <div className="mobile-menu" />
             </div>
           </div>
         </div>
-      </header>
+      </header >
       <main>{children}</main>
       <footer className="footer-style footer-04-style">
         <div className="footer-top-area pt-100 pb-70">
