@@ -8,6 +8,22 @@ const Detail = () => {
       <Layout>
         <div className="blog-area pt-120 pb-90">
           <div className="container">
+            <div className="slider-btn">
+              <Link
+                to="/artikel"
+                data-animation="fadeInUp"
+                data-delay=".8s"
+                className="btn btn-primary"
+                style={{
+                  marginBottom: '50px',
+                  backgroundColor: '#36b65e',
+                  border: 'none',
+                  fontSize: '14px',
+                }}
+              >
+                Kembali
+              </Link>
+            </div>
             <div className="row">
               <div className="col-xl-8 col-lg-8 mb-30">
                 <div className="blog-wrapper blog-standard blog-details">
@@ -149,6 +165,26 @@ const Detail = () => {
                           October 28, 2018{' '}
                         </div>
                       </div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="widget mb-40">
+                  <h3 className="widget-title">Kategori</h3>
+                  <ul className="service-list">
+                    <li>
+                      <Link to="/detail">Organisasi</Link>
+                    </li>
+                    <li>
+                      <Link to="/detail">Keluarga</Link>
+                    </li>
+                    <li>
+                      <Link to="/detail">Karir</Link>
+                    </li>
+                    <li>
+                      <Link to="/detail">Masalah diri</Link>
+                    </li>
+                    <li>
+                      <Link to="/detail">Trauma</Link>
                     </li>
                   </ul>
                 </div>
