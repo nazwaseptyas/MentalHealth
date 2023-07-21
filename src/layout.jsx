@@ -6,9 +6,7 @@ import { Notify } from './toast';
 
 const Layout = ({ children }) => {
   let user = localStorage.getItem('user');
-  // console.log(user);
-  // const 
-  // console.log();
+
   const navigate = useNavigate()
   const logout = () => {
     localStorage.removeItem('user');

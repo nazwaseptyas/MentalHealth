@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
@@ -1822,8 +1823,7 @@ label {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: 'Flaticon';
-    src: url('https://devsnews.com/template/mindpress/mindpress/assets/css/Flaticon.svg/#Flaticon')
-      format('svg');
+    src: url('https://devsnews.com/template/mindpress/mindpress/assets/css/Flaticon.svg/#Flaticon') format('svg');
   }
 }
 
@@ -1955,10 +1955,12 @@ label {
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
+
   50% {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
+
   100% {
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
@@ -1981,6 +1983,7 @@ label {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -1991,6 +1994,7 @@ label {
   from {
     -webkit-transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
   }
@@ -2585,7 +2589,7 @@ label {
   text-align: right;
 }
 
-.close-icon > button {
+.close-icon>button {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 0 none;
   color: #36b65e;
@@ -2594,7 +2598,7 @@ label {
   padding: 0;
 }
 
-.extra-info > p {
+.extra-info>p {
   color: #ddd;
   font-size: 15px;
   line-height: 28px;
@@ -2608,14 +2612,14 @@ label {
   width: 100%;
 }
 
-.social-icon-right > a {
+.social-icon-right>a {
   color: #ffffff;
   display: inline-block;
   margin-right: 20px;
   text-align: center;
 }
 
-.social-icon-right > a:hover {
+.social-icon-right>a:hover {
   color: #36b65e;
 }
 
@@ -2624,7 +2628,7 @@ label {
   margin: 0 -4px;
 }
 
-.instagram > a {
+.instagram>a {
   float: left;
   width: 33.33%;
   padding: 0 4px;
@@ -2656,59 +2660,59 @@ label {
 
 /* menu */
 
-.main-menu nav > ul > li {
+.main-menu nav>ul>li {
   display: inline-block;
   position: relative;
   margin-right: 52px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .main-menu nav > ul > li {
+  .main-menu nav>ul>li {
     margin-right: 35px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .main-menu nav > ul > li {
+  .main-menu nav>ul>li {
     margin-right: 17px;
   }
 }
 
-.main-menu nav > ul > li:last-child {
+.main-menu nav>ul>li:last-child {
   margin-right: 0;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .menu-03 .main-menu nav > ul > li {
+  .menu-03 .main-menu nav>ul>li {
     margin-right: 50px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .menu-03 .main-menu nav > ul > li {
+  .menu-03 .main-menu nav>ul>li {
     margin-right: 23px;
   }
 }
 
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
-  .menu-04 .main-menu nav > ul > li {
+  .menu-04 .main-menu nav>ul>li {
     margin-right: 20px;
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .menu-04 .main-menu nav > ul > li {
+  .menu-04 .main-menu nav>ul>li {
     margin-right: 20px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .menu-04 .main-menu nav > ul > li {
+  .menu-04 .main-menu nav>ul>li {
     margin-right: 23px;
   }
 }
 
-.main-menu nav > ul > li > a {
+.main-menu nav>ul>li>a {
   display: flex;
   font-size: 16px;
   align-items: center;
@@ -2724,13 +2728,13 @@ label {
   font-weight: 700;
 }
 
-.main-menu nav > ul > li > a i {
+.main-menu nav>ul>li>a i {
   font-size: 12px;
   margin-left: 3px;
 }
 
-.main-menu nav > ul > li:hover > a,
-.main-menu nav > ul > li.active > a {
+.main-menu nav>ul>li:hover>a,
+.main-menu nav>ul>li.active>a {
   color: #36b65e;
 }
 
@@ -2856,7 +2860,7 @@ label {
 
 /* sub-menu */
 
-.main-menu nav > ul > li .sub-menu {
+.main-menu nav>ul>li .sub-menu {
   background: #ffffff none repeat scroll 0 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
   left: 0;
@@ -2871,17 +2875,17 @@ label {
   text-align: left;
 }
 
-.main-menu nav > ul > li:hover .sub-menu {
+.main-menu nav>ul>li:hover .sub-menu {
   opacity: 1;
   top: 100%;
   visibility: visible;
 }
 
-.main-menu nav > ul > li .sub-menu li {
+.main-menu nav>ul>li .sub-menu li {
   display: block;
 }
 
-.main-menu nav > ul > li .sub-menu li a {
+.main-menu nav>ul>li .sub-menu li a {
   color: #666666;
   font-size: 14px;
   margin: 0;
@@ -2891,7 +2895,7 @@ label {
   font-size: 400;
 }
 
-.main-menu nav > ul > li:hover > .sub-menu li > a:hover {
+.main-menu nav>ul>li:hover>.sub-menu li>a:hover {
   color: #fff;
   background: #251e5e;
 }
@@ -2942,6 +2946,7 @@ label {
   .slider-height {
     min-height: 500px;
   }
+
   .slider-height::before {
     position: absolute;
     left: 0;
@@ -2960,6 +2965,7 @@ label {
   .slider-height {
     min-height: 500px;
   }
+
   .slider-height::before {
     position: absolute;
     left: 0;
@@ -3187,8 +3193,7 @@ label {
   right: -2px;
   border-radius: inherit;
   border: 1px solid #fff;
-  -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both
-    infinite;
+  -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
   animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
   transition: 0.3s;
 }
@@ -3199,11 +3204,13 @@ label {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+
   80% {
     border-width: 1px;
     -webkit-transform: scale(1.35);
     transform: scale(1.35);
   }
+
   100% {
     opacity: 0;
   }
@@ -4627,7 +4634,7 @@ label {
   transform: scale(0.5);
 }
 
-.case-icon > a {
+.case-icon>a {
   height: 50px;
   width: 50px;
   line-height: 50px;
@@ -4639,7 +4646,7 @@ label {
   transition: 0.3s;
 }
 
-.case-icon > a:hover {
+.case-icon>a:hover {
   background: #36b65e;
   color: #ffffff;
 }
@@ -4689,7 +4696,7 @@ label {
   }
 }
 
-.case-text h4 > a {
+.case-text h4>a {
   transition: 0.3s;
 }
 
@@ -5176,7 +5183,7 @@ label {
   line-height: 1;
 }
 
-.counter-content h2 > span {
+.counter-content h2>span {
   font-size: 24px;
 }
 
@@ -5198,14 +5205,14 @@ label {
   }
 }
 
-.counter-content > span {
+.counter-content>span {
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .counter-content > span {
+  .counter-content>span {
     font-size: 18px;
   }
 }
@@ -5300,7 +5307,7 @@ label {
   }
 }
 
-.counter-text > span {
+.counter-text>span {
   color: #ffffff;
   font-weight: 700;
   font-size: 16px;
@@ -5640,8 +5647,7 @@ a .sup-text span {
   right: -2px;
   border-radius: inherit;
   border: 1px solid #fff;
-  -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both
-    infinite;
+  -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
   animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
   transition: 0.3s;
 }
@@ -5652,11 +5658,13 @@ a .sup-text span {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+
   80% {
     border-width: 1px;
     -webkit-transform: scale(1.35);
     transform: scale(1.35);
   }
+
   100% {
     opacity: 0;
   }
@@ -5688,7 +5696,7 @@ a .sup-text span {
   border-top: 2px solid #36b65e;
 }
 
-.blog-date-latest > a {
+.blog-date-latest>a {
   font-size: 32px;
   color: #251e5e;
   font-weight: 700;
@@ -5696,7 +5704,7 @@ a .sup-text span {
   display: inline-block;
 }
 
-.blog-date-latest > a span {
+.blog-date-latest>a span {
   color: #36b65e;
   font-size: 14px;
   line-height: 1;
@@ -5760,7 +5768,7 @@ a .sup-text span {
   margin-right: 0;
 }
 
-.blog-meta-latest span > a {
+.blog-meta-latest span>a {
   font-size: 14px;
   color: #251e5e;
   font-weight: 700;
@@ -5900,7 +5908,7 @@ a .sup-text span {
   transition: 0.3s;
 }
 
-.blog-meta span > a {
+.blog-meta span>a {
   font-size: 15px;
   color: #251e5e;
 }
@@ -5922,11 +5930,11 @@ a .sup-text span {
   margin-top: 12px;
 }
 
-.blog-text h4 > a {
+.blog-text h4>a {
   transition: 0.3s;
 }
 
-.blog-text h4 > a:hover {
+.blog-text h4>a:hover {
   color: #251e5e;
 }
 
@@ -5981,11 +5989,11 @@ a .sup-text span {
   }
 }
 
-.news-text h4 > a {
+.news-text h4>a {
   transition: 0.3s;
 }
 
-.news-text h4 > a:hover {
+.news-text h4>a:hover {
   color: #251e5e;
 }
 
@@ -5993,19 +6001,19 @@ a .sup-text span {
   padding: 0;
 }
 
-.news-text .blog-meta span > a {
+.news-text .blog-meta span>a {
   color: #282828;
 }
 
-.news-text .b-button > a {
+.news-text .b-button>a {
   color: #282828;
 }
 
-.news-text .b-button > a::before {
+.news-text .b-button>a::before {
   background: #282828;
 }
 
-.news-text .b-button > a:hover {
+.news-text .b-button>a:hover {
   color: #251e5e;
 }
 
@@ -7051,12 +7059,12 @@ ul.cat li a:hover {
   margin-top: 7px;
 }
 
-.footer-news-text h5 > a {
+.footer-news-text h5>a {
   color: #ffffff;
   transition: 0.3s;
 }
 
-.footer-news-text h5 > a:hover {
+.footer-news-text h5>a:hover {
   color: #36b65e;
 }
 
@@ -7227,12 +7235,12 @@ ul.cat li a:hover {
   color: #251e5e;
 }
 
-.footer-style .footer-news-text h5 > a {
+.footer-style .footer-news-text h5>a {
   color: #251e5e;
   transition: 0.3s;
 }
 
-.footer-style .footer-news-text h5 > a:hover {
+.footer-style .footer-news-text h5>a:hover {
   color: #36b65e;
 }
 
@@ -7863,18 +7871,18 @@ ul.cat li a:hover {
   line-height: 1;
 }
 
-.gallery-img > a {
+.gallery-img>a {
   position: relative;
   display: block;
   overflow: hidden;
 }
 
-.gallery-img > a img {
+.gallery-img>a img {
   width: 100%;
   transition: 0.3s;
 }
 
-.gallery-img > a::before {
+.gallery-img>a::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -7891,7 +7899,7 @@ ul.cat li a:hover {
   transform: scale(1.1);
 }
 
-.gallery-wrapper:hover .gallery-img > a::before {
+.gallery-wrapper:hover .gallery-img>a::before {
   opacity: 0.6;
 }
 
@@ -9004,8 +9012,7 @@ a {
   border-radius: 7px;
   outline: none;
   border: 1px solid #e5e5e5;
-  filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from './layout';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import Loading from './loading';
 
 const Home = () => {
+
   return (
     <>
       <Layout>
+
         <section className="hero-area pos-rel mr-30 ml-30">
           <div className="slider-icon d-none d-xl-block">
             <Link to="/kontak">

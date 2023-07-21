@@ -1,142 +1,121 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from './layout';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import Loading from './loading';
+
+function generateNumbers(input) {
+  const result = [];
+  let startNumber = (input - 1) * 3;
+
+  for (let i = 0; i < 2; i++) {
+    result.push(startNumber + i * 3);
+  }
+
+  return result;
+}
+function formatDate(inputDate) {
+  const monthsInIndonesian = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+
+  const [year, month, day] = inputDate.split("-");
+  const dateObject = new Date(year, month - 1, day);
+
+  const formattedDate = `${parseInt(day)} ${monthsInIndonesian[dateObject.getMonth()]} ${year}`;
+
+  return formattedDate;
+}
+
 
 const Artikel = () => {
+  // const { page } = useParams();
+  const [artikel, setartikel] = useState([]); // ini
+  let [page, setpage] = useState(1); // ini
+  const API = import.meta.env.VITE_BASE_URL;
+  const [isLoading, setisLoading] = useState(false);
+
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const getDataartikel = async () => {
+      setisLoading(true);
+      const response = await axios.get(`${API}/artikel`);
+      setartikel(response.data);
+      setisLoading(false);
+    };
+
+    getDataartikel();
+
+  }, []);
+
+  const [min, max] = generateNumbers(page)
+  const dataartikel = artikel.slice(min, max)
+  const setdatapage = (e) => {
+    setpage(e.target.dataset.filter)
+  }
   return (
     <>
+
       <Layout>
+
         <div className="blog-area pt-120 pb-90">
           <div className="container">
             <div className="row">
               <div className="col-xl-8 col-lg-8 mb-30">
-                <div className="blog-wrapper blog-standard  mb-50">
-                  <div className="blog-img">
-                    <Link to="/detail">
-                      <img src="https://imgur.com/B1cSKji.png" alt="" />
-                    </Link>
-                  </div>
-                  <div className="blog-text">
-                    <div className="blog-meta">
-                      <span>
-                        <i className="far fa-calendar-alt" />{' '}
-                        <Link to="/detail">15 Agustus 2021</Link>
-                      </span>
-                      <span>
-                        <i className="far fa-user" />{' '}
-                        <Link to="/detail">Taschiyatul Himiyah</Link>
-                      </span>
+                {isLoading && <div className="d-flex align-items-center justify-content-center">
+                  <Loading />
+                </div>}
+                {dataartikel.map((a, key) => {
+                  const format_tanggal = formatDate(a.tanggal)
+                  return (
+                    <div className="blog-wrapper blog-standard  mb-50" key={key}>
+                      <div className="blog-img">
+                        <Link to="/detail">
+                          <img src={a.gambar} alt="" />
+                        </Link>
+                      </div>
+                      <div className="blog-text">
+                        <div className="blog-meta">
+                          <span>
+                            <i className="far fa-calendar-alt" />{' '}
+                            <Link to="/detail">{format_tanggal}</Link>
+                          </span>
+                          <span>
+                            <i className="far fa-user" />{' '}
+                            <Link to="/detail">{a.penulis}</Link>
+                          </span>
+                        </div>
+                        <h4>
+                          <Link to="/detail">
+                            {a.judul}
+                          </Link>
+                        </h4>
+                        <p>
+                          {a.isi_artikel}
+                        </p>
+
+
+                        <Link to="/detail" className="c-btn gray-btn">
+                          <span> </span> Selengkapnya <span />
+                        </Link>
+                      </div>
                     </div>
-                    <h4>
-                      <Link to="/detail">
-                        Fenomena Strict Parents di Kalangan Mahasiswa:
-                        Sentralisasi Ambisi dan Situasi
-                      </Link>
-                    </h4>
-                    <p>
-                      Setiap orang tua memiliki peraturan masing-masing dalam
-                      ranah kebaikan untuk masa depan anaknya, dan setiap
-                      peraturan yang telah dijadikan sebagai kebijakan dalam
-                      masing-masing keluarga pun berbeda-beda. Hal demikian
-                      termasuk ke dalam sikap parenting (pola pengasuhan).
-                    </p>
-                    <p>
-                      Dalam kamus Merriam Webster, parenting didefinisikan
-                      sebagai:
-                    </p>
-                    <ol>
-                      <li>
-                        1. The raising of the child by its parents (Membesarkan
-                        anak yang dilakukan oleh orang tua)
-                      </li>
-                      <li>
-                        2. The act or process of becoming a parent (Proses dalam
-                        menjadi orang tua)
-                      </li>
-                      <li>
-                        3. The taking care of someone in the manner of a parent
-                        (Merawat seseorang yang dilakukan dengan cara oleh orang
-                        tua)
-                      </li>
-                    </ol>
-                    <p>
-                      Pengasuhan (parenting) merupakan upaya yang dilakukan
-                      sebagai bentuk tanggung jawab sebagai orang tua untuk
-                      memberikan hak dan kewajiban kepada seorang anak,
-                      seyogyanya sebelum berada di fase pengasuhan setiap orang
-                      tua harus melewati masa pernikahan dan ketika seseorang
-                      sudah siap untuk menikah maka mereka juga secara otomatis
-                      harus siap ketika berada di fase pengasuhan, mulai dari
-                      membimbing, menasehati, serta mengarahkan kepada kebaikan,
-                      lebih-lebih sebagai orang tua harus mampu mendukung apapun
-                      yang sedang menjadi proses bagi si anak terutama demi masa
-                      depannya yang mana hal ini kerap kali berkaitan dengan
-                      dunia pendidikan.
-                    </p>
-
-                    <p>
-                      Mahasiswa merupakan sebutan bagi orang yang tengah
-                      mengenyam pendidikan di perguruan tinggi. Mahasiswa kerap
-                      kali mendapat klasifikasi dengan berbagai tipe, salah
-                      satunya dalam pandangan M Yusril Ihza Maulana (Ketua Senat
-                      Mahasiswa UIN Sunan Ampel Surabaya 2020), beliau
-                      mengklasifikasikan mahasiswa menjadi:
-                    </p>
-
-                    <ol>
-                      <li>
-                        1. Mahasiswa Aktivis, yakni seorang mahasiswa yang tidak
-                        hanya aktif dalam mengikuti pelajaran di universitas
-                        tetapi juga terlibat dalam organisasi kampus seperti
-                        Senat Mahasiswa (SEMA), Dewan Eksekutif Mahasiswa
-                        (DEMA), Himpunan Mahasiswa (HIMA), dan sebagainya.
-                      </li>
-                      <li>
-                        2. Mahasiswa Akademis, mahasiswa kategori ini lebih
-                        fokus pada aspek akademis dan cenderung kurang aktif di
-                        luar kegiatan perkuliahan.
-                      </li>
-                    </ol>
-
-                    <p>
-                      Mahasiswa juga termasuk dalam kategori pelajar tahap
-                      lanjut yang memiliki ambisi, karena ketika mereka siap dan
-                      mau untuk melanjutkan ke jenjang pendidikan yang lebih
-                      tinggi maka secara tidak langsung memiliki harapan serta
-                      cita-cita di masa depannya. Namun, tidak sedikit ambisi
-                      mereka terpatahkan oleh situasi, situasi yang dibangun dan
-                      ditegakkan oleh orang tua mereka, orang tua yang yang
-                      seharusnya berperan mendukung malah menutup proses
-                      perkembangan anaknya sendiri.
-                    </p>
-
-                    <h5>Cara Mengatasi Strict Parents:</h5>
-
-                    <ol>
-                      <li>
-                        1. Miliki quality time (waktu berkualitas) antara orang
-                        tua dengan anak. Isi dengan nasehat, diskusi, dan
-                        kegiatan positif.
-                      </li>
-                      <li>
-                        2. Orang tua selalu percaya terhadap kegiatan positif
-                        yang dilakukan anaknya, selagi hal tersebut memiliki
-                        aspek pendorong untuk mendapat dukungan.
-                      </li>
-                      <li>
-                        3. Anak harus dapat memegang kepercayaan yang telah
-                        diberikan oleh orang tuanya, sehingga tidak adanya
-                        tekanan serta pelarangan terhadap hal-hal positif yang
-                        dilakukan.
-                      </li>
-                    </ol>
-
-                    <Link to="/detail" className="c-btn gray-btn">
-                      <span> </span> Selengkapnya <span />
-                    </Link>
-                  </div>
-                </div>
-                <div className="blog-wrapper blog-standard  mb-50">
+                  )
+                })}
+                {/* <div className="blog-wrapper blog-standard  mb-50">
                   <div className="blog-img">
                     <Link to="/detail">
                       <img src="https://imgur.com/oPQM5mZ.png" alt="" />
@@ -644,27 +623,34 @@ const Artikel = () => {
                       <span> </span> Selengkapnya <span />
                     </Link>
                   </div>
-                </div>
+                </div> */}
+                <div className='mb-5' id='basic-pagination'></div>
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="basic-pagination mt-20 basic-pagination-2">
-                      <ul>
-                        <li>
-                          <a href="#">
+                      <ul >
+                        <li onClick={() => setpage(page - 1)}>
+                          <a href="#basic-pagination">
                             <i className="far fa-angle-left" />
                           </a>
                         </li>
-                        <li className="active">
-                          <a href="#">1</a>
+                        <li className={page == 1 ? 'active' : ''} onClick={setdatapage} >
+                          <a href="#basic-pagination" data-filter="1">1</a>
                         </li>
-                        <li>
+                        <li className={page == 2 ? 'active' : ''} onClick={setdatapage} >
+                          <a href="#basic-pagination" data-filter="2">2</a>
+                        </li>
+                        <li className={page == 3 ? 'active' : ''} onClick={setdatapage} >
+                          <a href="#basic-pagination" data-filter="3">3</a>
+                        </li>
+                        {/* <li>
                           <a href="#">2</a>
                         </li>
                         <li>
                           <a href="#">3</a>
-                        </li>
-                        <li>
-                          <a href="#">
+                        </li> */}
+                        <li onClick={() => setpage(page + 1)}>
+                          <a href="#basic-pagination">
                             <i className="far fa-angle-right" />
                           </a>
                         </li>

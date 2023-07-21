@@ -57,7 +57,7 @@ const Login = () => {
       <Layout>
         <form className="form_container" onSubmit={simpan}>
           <div className="title_container">
-            <Loading />
+            {/* <Loading /> */}
             <p className="title">Masuk Akun</p>
             <span className="subtitle">
               Masuk akun sekarang dan mulailah konsultasi sekarang juga.
